@@ -7,7 +7,7 @@ Vue.config.productionTip = false;
 import "element-ui/lib/theme-chalk/index.css";
 Vue.use(ElementUI);
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+    router,
+    store,
+    render: h => h(App)
 }).$mount("#app");
