@@ -5,7 +5,7 @@
         <el-container>
             <el-aside width="200px">Aside</el-aside>
             <el-container>
-                <el-header>TEST</el-header>
+                <el-header>MASTER</el-header>
                 <el-main>
                     <Form></Form>
                 </el-main>
