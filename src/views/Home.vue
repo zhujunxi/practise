@@ -3,7 +3,7 @@
         <!-- <img alt="Vue logo" src="../assets/logo.png" />
 		<HelloWorld msg="Welcome to Your Vue.js App" />-->
         <el-container>
-            <el-aside width="200px">Aside</el-aside>
+            <el-aside width="200px">MASTER-Aside</el-aside>
             <el-container>
                 <el-header>MASTER</el-header>
                 <el-main>
