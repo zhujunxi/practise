@@ -46,7 +46,8 @@
             "indent": [
                 "error",
                 4
-            ]
+            ],
+            "no-irregular-whitespace": 0
         },
         "parserOptions": {
             "parser": "babel-eslint"
@@ -55,6 +56,8 @@
     "prettier": {
         "tabWidth": 4,
         "printWidth": 80,
+        "singleQuote": true,
+        "semi": false,
         "jsxBracketSameLine": true
     },
     "postcss": {
