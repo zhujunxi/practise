@@ -8,12 +8,30 @@
 import AsyncValidator from 'async-validator'
 export default {
     name: 'md-form',
-    componentName: 'MdForm', // 通过 $options.componentName 来找 form 组件
+    componentName: 'MdForm', // 通过 $options.componentName 来找 form 组件\
+    props: {
+        model: Object,
+        rules: Object
+    },
     data() {
         return {
             fields: [], // field: {prop, el}，保存FormItem的信息
             formError: {}
         }
+    },
+    created() {
+        this.$on('form.addField', field => {
+            if (field) {
+                this.fields = [...this.fields, field]
+            }
+        })
+        this.$on('form.removeField', field => {
+            if (field) {
+                this.fields = this.fields.filter(
+                    ({ prop }) => prop !== field.prop
+                )
+            }
+        })
     },
     computed: {
         formRules() {
@@ -60,24 +78,6 @@ export default {
                 callback(errInfo)
             })
         }
-    },
-    props: {
-        model: Object,
-        rules: Object
-    },
-    created() {
-        this.$on('form.addField', field => {
-            if (field) {
-                this.fields = [...this.fields, field]
-            }
-        })
-        this.$on('form.removeField', field => {
-            if (field) {
-                this.fields = this.fields.filter(
-                    ({ prop }) => prop !== field.prop
-                )
-            }
-        })
     }
 }
 </script>

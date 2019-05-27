@@ -3,6 +3,9 @@
         <md-form-item label="手机号" prop="tel">
             <input type="tel" maxlength="11" v-model.trim="formData.tel" />
         </md-form-item>
+        <md-form-item label="姓名" prop="tel">
+            <input v-model.trim="formData.name" />
+        </md-form-item>
         <md-form-item label="按钮">
             <a @click="handleSubmit">触发</a>
         </md-form-item>
@@ -19,6 +22,7 @@ export default {
     data() {
         return {
             formData: {
+                name: '',
                 tel: ''
             },
             rules: {

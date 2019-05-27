@@ -1,5 +1,5 @@
 <template>
-    <div class="form-item">
+    <div class="md-form-item">
         <label :for="prop" class="form-item-label" v-if="label">
             {{ label }}
         </label>
@@ -54,3 +54,9 @@ export default {
     }
 }
 </script>
+
+<style lang="less" scoped>
+.md-form-item {
+    display: flex;
+}
+</style>
