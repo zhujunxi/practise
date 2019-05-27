@@ -7,7 +7,7 @@
             <el-container>
                 <el-header>Header</el-header>
                 <el-main>
-                    <Form></Form>
+                    <FormDemo></FormDemo>
                 </el-main>
                 <!-- <el-footer>Footer</el-footer> -->
             </el-container>
@@ -18,15 +18,14 @@
 <script>
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
-import Form from "./Form.vue";
-
+import FormDemo from './form-demo'
 export default {
-    name: "home",
+    name: 'home',
     components: {
         // HelloWorld,
-        Form
+        FormDemo
     }
-};
+}
 </script>
 
 <style lang="less" scoped>
